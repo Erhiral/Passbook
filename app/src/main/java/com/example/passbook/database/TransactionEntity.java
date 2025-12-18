@@ -19,11 +19,20 @@ public class TransactionEntity {
     public String type; // CREDIT or DEBIT
 
     public long timestamp;
+    
+    public String description;
 
-    public TransactionEntity(String title, double amount, String type, long timestamp) {
+    public TransactionEntity(String title, double amount, String type, long timestamp, String description) {
         this.title = title;
         this.amount = amount;
         this.type = type;
         this.timestamp = timestamp;
+        this.description = description;
+    }
+    
+    // For backward compatibility - marked with @Ignore for Room
+    @androidx.room.Ignore
+    public TransactionEntity(String title, double amount, String type, long timestamp) {
+        this(title, amount, type, timestamp, "");
     }
 }

@@ -5,4 +5,9 @@
         <item>Credit</item>
         <item>Debit</item>
     </string-array>
+
+    <string-array name="transaction_types">
+        <item>CREDIT</item>
+        <item>DEBIT</item>
+    </string-array>
 </resources>

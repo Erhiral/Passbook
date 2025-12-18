@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 
 import com.example.passbook.R;
 import com.example.passbook.databinding.ActivityHomeBinding;
+import com.example.passbook.fragment.HistoryFragment;
+import com.example.passbook.fragment.HomeFragment;
+import com.example.passbook.fragment.SummaryFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
