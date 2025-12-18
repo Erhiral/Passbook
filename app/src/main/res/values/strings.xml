@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Passbook</string>
+    <string-array name="transaction_type">
+        <item>Select Type</item>
+        <item>Credit</item>
+        <item>Debit</item>
+    </string-array>
+</resources>

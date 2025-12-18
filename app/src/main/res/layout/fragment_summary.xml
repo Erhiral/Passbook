@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/_16sdp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Summary"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- Credit Card -->
+    <com.google.android.material.card.MaterialCardView
+        app:cardElevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Total Credit"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/tvCredit"
+                android:text="₹ 0"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20ssp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Debit Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="@dimen/_12sdp"
+        app:cardElevation="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_12sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="@dimen/_16sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Total Debit"
+                android:textSize="@dimen/_14ssp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/tvDebit"
+                android:text="₹ 0"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20ssp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Balance -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="@dimen/_16sdp"
+        app:cardElevation="@dimen/_6sdp"
+        app:cardCornerRadius="@dimen/_14sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:padding="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Current Balance"
+                android:textSize="@dimen/_16ssp"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/tvBalance"
+                android:text="₹ 0"
+                android:textStyle="bold"
+                android:textSize="@dimen/_24ssp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
