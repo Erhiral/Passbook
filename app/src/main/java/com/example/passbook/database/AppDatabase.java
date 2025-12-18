@@ -35,3 +35,30 @@ public abstract class AppDatabase extends RoomDatabase {
         }
     };
 }
+
+//
+//
+//@Database(entities = {User.class}, version = 1, exportSchema = false)
+//public abstract class AppDatabase extends RoomDatabase {
+//
+//    private static volatile AppDatabase INSTANCE;
+//
+//    public abstract UserDao userDao();
+//
+//    public static AppDatabase getInstance(Context context) {
+//        if (INSTANCE == null) {
+//            synchronized (AppDatabase.class) {
+//                if (INSTANCE == null) {
+//                    INSTANCE = Room.databaseBuilder(
+//                                    context.getApplicationContext(),
+//                                    AppDatabase.class,
+//                                    "passbook_db"
+//                            )
+//                            .fallbackToDestructiveMigration()  // ❌ wipes DB if version changes
+//                            .build();
+//                }
+//            }
+//        }
+//        return INSTANCE;
+//    }
+//}
