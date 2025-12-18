@@ -1,5 +1,6 @@
 package com.example.passbook.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,6 +15,8 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.passbook.R;
 import com.example.passbook.database.TransactionEntity;
 import com.example.passbook.databinding.FragmentHomeBinding;
+import com.example.passbook.ui.DetailActivity;
+import com.example.passbook.ui.ProductActivity;
 import com.example.passbook.viewmodel.TransactionViewModel;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
 
@@ -32,6 +35,21 @@ public class HomeFragment extends Fragment {
 
         setupTypeDropdown();
         setupSaveButton();
+
+        // Set up View All button click listener
+        if (binding.btnViewAll != null) {
+            binding.btnViewAll.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(requireContext(), ProductActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Toast.makeText(requireContext(), "Error opening products: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            android.util.Log.e("HomeFragment", "btnViewAll is null - check your layout file");
+        }
 
         return binding.getRoot();
     }
